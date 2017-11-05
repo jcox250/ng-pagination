@@ -1,0 +1,6 @@
+<div *ngIf="visiblePeople">
+  <div *ngFor="let p of visiblePeople">
+    {{ p.name }}
+  </div>
+  <ngb-pagination [collectionSize]="collectionSize" (pageChange)="loadPage($event)" [(page)]="page" [pageSize]="itemsPerPage"></ngb-pagination>
+</div>
